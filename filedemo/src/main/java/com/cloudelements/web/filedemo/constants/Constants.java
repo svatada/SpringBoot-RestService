@@ -9,6 +9,7 @@ public class Constants {
 	public static final String MAPPING_UPLOADFILE_URI = "/uploadFile";
 	public static final String MAPPING_DOWNLOADFILE_URI = "/downloadFile";
 	public static final String MAPPING_BROWSEFILE_URI = "/browseFiles";
+	public static final String MAPPING_ERRORS_URI = "/errors";
 
 	public static final String REQUEST_PARAM_FILE = "file";
 	public static final String REQUEST_PARAM_UPLOADTO = "uploadTo";
@@ -23,6 +24,7 @@ public class Constants {
 	
 	public static final String DEFAULT_DIRTYPE="dir";
 	public static final String DEFAULT_FILETYPE="file";
+	public static final String DEFAULT_ERROR_STRING= "{\"code\": %s, \"Exception Message\": \"%s\"}"; 
 	
 	
 }
