@@ -61,7 +61,7 @@ public class FileController implements ErrorController {
 	@GetMapping(MAPPING_BROWSEFILE_URI)
 	public ResponseEntity<List<BrowseDirResponse>> browseFile(
 			@RequestParam(REQUEST_PARAM_SEARCHDIR) String searchFolder,
-			@RequestParam(REQUEST_PARAM_PATTERN) String pattern) {
+			@RequestParam(value = REQUEST_PARAM_PATTERN, required = false, defaultValue = "*") String pattern) {
 		// Load file as Resource
 		List<BrowseDirResponse> filesList = fileStorageService.browseFiles(searchFolder, pattern);
 		return ResponseEntity.ok().contentType(MediaType.parseMediaType(DEFAULT_MIME_TYPE)).body(filesList);
